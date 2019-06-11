@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  clientId: 'e81482fe84c24fe49202c406b0b146bf',
+  // tslint:disable-next-line:max-line-length
+  clientSecret: 'BQBz41PtAu4a4pv5lEqnTMGC-b40XJzimt87HUdC8CHyuTS5jS_bOJrBslguUS4b-I-fZTmuTpjhxKZBECI88_k44Q5hsZfKXygOh8Do5OpffzM52JowJ8rBnVR60z_veSVOTxuftHaIPE4',
+  redirectUri: 'http://localhost:4200/callback'
 };
 
 /*

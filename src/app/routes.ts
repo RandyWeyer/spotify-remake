@@ -6,6 +6,6 @@ import { CallbackComponent } from './callback/callback.component';
 
 export const allAppRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'login', component: CallbackComponent },
+  { path: 'login', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent }
 ];

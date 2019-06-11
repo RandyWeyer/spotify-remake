@@ -27,7 +27,30 @@
               <input id="artist-input" class="form-control" type="search" placeholder="Search" aria-label="Search">
         
               <button class="btn btn-outline-success" (click)="searchArtist()" type="submit">Search</button>
-        
+
+
+                <div class="table-responsive-md">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Artist</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Popularity</th>
+                        <th scope="col">Add</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let artist of artists; index as i;">
+                        <th scope="row">{{ i+1 }}</th>
+                        <td>{{ artist.name }}</td>
+                        <td>{{ artist.genres[0] }}</td>
+                        <td>{{ artist.popularity }}</td>
+                        <td><a (click)="addToPlaylist(artist)">Add</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
 
           </div>
@@ -36,9 +59,25 @@
         <div class="card col-md-6" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">Playlist</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Play</a>
-            <a href="#" class="btn btn-primary">Share</a>
+            <div class="table-responsive-md">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Artist</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Popularity</th>
+                    <th scope="col">Listen</th>
+                    <th scope="col">Remove</th>
+                  </tr>
+                </thead>
+                <tbody id="static-playlist">
+                  <tr *ngFor="let artist of artists; index as i;">
+                    <!-- Generated from the spotify API table -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
@@ -46,29 +85,7 @@
       </div>
 
 
-      <div class="row">
-        <div class="table-responsive-md col-md-6">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Artist</th>
-                <th scope="col">Genre</th>
-                <th scope="col">Popularity</th>
-                <th scope="col">Listen</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let artist of artists">
-                <th scope="row"></th>
-                <td>{{ artist.name }}</td>
-                <td>{{ artist.genres[0] }}</td>
-                <td>{{ artist.popularity }}</td>
-                <td><a href="{{ artist.external_urls }}" target="_blank">Listen</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+
 
         <div class="card col-md-6">
           <div class="card-body">
@@ -88,6 +105,3 @@
 
   <!-- End of Container -->
   </div>
-
-
-
