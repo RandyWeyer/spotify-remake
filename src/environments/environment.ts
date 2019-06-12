@@ -7,7 +7,7 @@ export const environment = {
 
   clientId: 'e81482fe84c24fe49202c406b0b146bf',
   // tslint:disable-next-line:max-line-length
-  clientSecret: 'BQBz41PtAu4a4pv5lEqnTMGC-b40XJzimt87HUdC8CHyuTS5jS_bOJrBslguUS4b-I-fZTmuTpjhxKZBECI88_k44Q5hsZfKXygOh8Do5OpffzM52JowJ8rBnVR60z_veSVOTxuftHaIPE4',
+  clientSecret: 'BQB3Y4nsanFm6B3u70XoyM-DvlQbkygKtfiE1Blwhv8FxmkUWVhqOIZRyOrTmy-67o8k160GYK8K7yfzQjZ9VgQYtqcIaHH0sUTOmbXDnQ7Tu6-mimu0WzTjtXTVSbMT0f5cbKzxj10GOTw',
   redirectUri: 'http://localhost:4200/callback'
 };
 
